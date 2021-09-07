@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Bartok</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=1244 height=700 style="width: 1244px; height: 700px; background: #231F20"></canvas>
+    <script src="Build/Bartok Build WebGL.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Bartok Build WebGL.data.unityweb",
+        frameworkUrl: "Build/Bartok Build WebGL.framework.js.unityweb",
+        codeUrl: "Build/Bartok Build WebGL.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "idevm",
+        productName: "Bartok",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
